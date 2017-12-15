@@ -87,9 +87,9 @@ function matchParens(expression){
             console.log(char, 'charOpening')
             stack.push(char)
         }else if(char === ')'){
-            const closeBrackets = stack.peek()
+            const openBrackets = stack.peek()
             console.log(char, 'charClose')
-            if(!closeBrackets){
+            if(!openBrackets){
                 return false
             }
             stack.pop()
@@ -104,5 +104,7 @@ function matchParens(expression){
         return true
 }
 
-console.log(matchParens('2+(3*)4'));
+console.log(matchParens('2+(3*)(4)('));
 // console.log(matchParent('(2+3-(2+4)'); //false
+
+////////////////////////////////////////////////////

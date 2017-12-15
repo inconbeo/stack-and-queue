@@ -61,6 +61,36 @@ class Queue {
 
 // console.log(q.dequeue(), 'dequeue')
 // console.log(q.dequeue(), 'dequeue')
-q.display();
-console.log(q)
+// q.display();
+// console.log(q)
+
+const queue = new Queue();
+queue.enqueue({
+    name: 'Gwendolyn Wilderman',
+    gender: 'female'
+});
+queue.enqueue({
+    name: 'Wilbur Brakus',
+    gender: 'male'
+});
+queue.enqueue({
+    name: 'Vallie Howell',
+    gender: 'female'
+});
+queue.enqueue({
+    name: 'Nova Doyle',
+    gender: 'female'
+});
+queue.enqueue({
+    name: 'Monica Turcotte',
+    gender: 'female'
+});
+queue.enqueue({
+    name: 'Corine Smith',
+    gender: 'female'
+});
+queue.enqueue({
+    name: 'Jamir Sporer',
+    gender: 'male'
+});
 
