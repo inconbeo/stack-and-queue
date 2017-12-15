@@ -56,6 +56,26 @@ s.push(5)
 // console.log(s.peek())
 // console.log(s.pop())
 
-s.display()
+// s.display()
+console.log(s);
 
-console.log(s)
+function is_palindrome(s) {
+    s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
+    // your code goes here
+    const stack = new Stack();
+    for (let i = 0; i < s.length; i ++) {
+        stack.push(s.charAt(i));
+    }
+    console.log(stack);
+    for(let i = 0; i < s.length; i++) {
+        if (stack.pop() !== s.charAt(i)){
+            return false
+        }
+    }
+    return true
+}
+
+
+
+console.log(is_palindrome('dadd'));
+
