@@ -57,7 +57,7 @@ s.push(5)
 // console.log(s.pop())
 
 // s.display()
-console.log(s);
+// console.log(s);
 
 function is_palindrome(s) {
     s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
@@ -74,8 +74,35 @@ function is_palindrome(s) {
     }
     return true
 }
+// console.log(is_palindrome('dadd'));
 
+function matchParens(expression){
+    const stack = new Stack();
+    
+    for(let i = 0; i<expression.length; i++){
+        let char = expression.charAt(i)
+        console.log(char, 'line 84')
+        if(char === '('){
+            console.log(i, 'i')
+            console.log(char, 'charOpening')
+            stack.push(char)
+        }else if(char === ')'){
+            const closeBrackets = stack.peek()
+            console.log(char, 'charClose')
+            if(!closeBrackets){
+                return false
+            }
+            stack.pop()
+        }
+        
+    }
+        console.log(stack), 'stack'
+        console.log(expression, 'expression')
+        if (stack.peek()){
+            return false
+        }
+        return true
+}
 
-
-console.log(is_palindrome('dadd'));
-
+console.log(matchParens('2+(3*)4'));
+// console.log(matchParent('(2+3-(2+4)'); //false
